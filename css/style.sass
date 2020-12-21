@@ -37,8 +37,15 @@ a
     &.first-article
         grid-area: card1
         background-color: $moderateViolet
+        position: relative
+        z-index: 0
         & .article-img
             border: 2px solid $moderateVioletBorder
+        & .quotation
+            position: absolute
+            top: 5px
+            right: 20px
+            z-index: -1
     &.second-article
         grid-area: card2
         background-color: $VeryDarkGrayishBlue
@@ -104,6 +111,12 @@ a
         & .article-second-text
             font-size: 15px
             line-height: 20px
+
+        &.first-article
+            & .quotation
+                top: 0
+                right: 96px
+                height: 115px
 
 @media screen and (max-width: 1024px)
     .article-content

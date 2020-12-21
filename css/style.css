@@ -35,10 +35,19 @@ a {
 .article-content.first-article {
   grid-area: card1;
   background-color: #7541c8;
+  position: relative;
+  z-index: 0;
 }
 
 .article-content.first-article .article-img {
   border: 2px solid #936ecf;
+}
+
+.article-content.first-article .quotation {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  z-index: -1;
 }
 
 .article-content.second-article {
@@ -137,6 +146,11 @@ a {
   .article-content .article-second-text {
     font-size: 15px;
     line-height: 20px;
+  }
+  .article-content.first-article .quotation {
+    top: 0;
+    right: 96px;
+    height: 115px;
   }
 }
 
